@@ -9,6 +9,7 @@ import Contact from "./components/pages/Contact";
 import Login from "./components/pages/Login/";
 import Profile from "./components/pages/Profile/";
 import Signup from "./components/pages/Signup";
+import TinderCards from "./components/TinderCard";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/red-paperclip/login" element={<Login />} />
           <Route path="/red-paperclip/profile" element={<Profile />} />
           <Route path="/red-paperclip/signup" element={<Signup />} />
+          <Route path="/red-paperclip" element={<TinderCards />} />
         </Routes>
       </Router>
       {/* item cards */}

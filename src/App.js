@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import Header from './components/Header/Header';
 import { Route, Router } from 'react-router-dom';
+import Chat from './components/pages/Chat';
+import Profile from './components/pages/Profile';
+import Login from './components/pages/Login';
+import Signup from './components/pages/Signup';
+import Contact from './components/pages/Contact';
+import Home from './components/pages/Home';
 import './styles/App.css';
 import "./components/Header/Header.css"
 
@@ -25,7 +31,6 @@ function App() {
 
   const handlePageChange = (page) => setCurrentPage(page);
 
-  
   return (
     <div className="App">
       <Router>

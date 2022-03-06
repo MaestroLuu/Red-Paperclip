@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import TinderCard from "react-tinder-card";
+import "../styles/ItemCard.css";
 
-export default function TinderCards() {
+export default function ItemCard() {
     const [items, setItems] = useState([
         {
             name: "paperclip",
@@ -15,20 +16,16 @@ export default function TinderCards() {
 
     return (
         <div>       
-            <h1>TinderCards</h1>
-            {items.map(item => (
-                <TinderCard
-                    className="swipe"
-                    key={item.name}
-                    preventSwipe={['up','down']}
-                >
-                    <div 
-                    style={{ backgroundImage: `url(${item.url})` }}
-                    className="card">
-                        <h3>{item.name}</h3>
-                    </div>
-                </TinderCard>
-            ))}
+            <h1>Items for Trade</h1>
+            <div className="itemCards__cardContainer">
+                {items.map(item => (
+                    <TinderCard className="swipe" key={item.name} preventSwipe={['up','down']}>
+                        <div style={{ backgroundImage: `url(${item.url})` }} className="card">
+                            <h3>{item.name}</h3>
+                        </div>
+                    </TinderCard>
+                ))}
+            </div>
         </div>
     );
 }
